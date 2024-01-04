@@ -1,0 +1,53 @@
+doctype html
+html
+    head
+        title #{title}
+        link(rel="stylesheet", href="/plugins/bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.css")
+        link(href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css", rel="stylesheet")
+        link(rel="stylesheet" href="/css/main.css")
+        
+        script(src="https://unpkg.com/axios/dist/axios.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js")
+        script(src="/js/common.js")
+        script(src="/js/user-registration.js")
+    body
+        main.container
+            section.row
+                section.col-lg-6.col-10.mx-auto.card.mt-3
+                    p.h2.text-center.mt-2.text-primary User Registration 
+                    form#userRegistration
+                        div.mb-3.form-floating
+                            input.form-control(name="fName"  type="text" placeholder="Enter First Name" value="ROSHAN")
+                            label Enter First Name
+                        div.mb-3.form-floating
+                            input.form-control(name="MName"  type="text" placeholder="Enter Middle Name" value="BHAURAO")
+                            label Enter Middle Name
+                        div.mb-3.form-floating
+                            input.form-control(name="lName" type="text" placeholder="Enter Last Name" value="WAKCHAURE")
+                            label Enter Last Name
+                        div.mb-3.form-floating
+                            input.form-control(name="mobile" type="text" placeholder="Mobile Number" value="9309158009")
+                            label Mobile Number
+
+                        div.mb-3.form-floating
+                            input.form-control(name="email" type="text" placeholder="Email" value="wakchaureroshan249@gmail.com")
+                            label Email
+
+                        div.mb-3.form-floating
+                            input.form-control(name="password" type="password" placeholder="password" value="admin@123")
+                            label Password
+
+                        div.mb-3.form-floating
+                            input.form-control(name="c_password" type="password" placeholder="confirm password" value="admin@123")
+                            label Confirm Password
+                                //- button.btn.btn-success Show
+                        
+                        div.mb-3.form-floating
+                            textarea.form-control(name="address" type="text" placeholder="Address") at post:Sangamaner,dist-ahamadanagar,maharastra.
+                            label Address
+
+                        div.mb-2.text-center.d-flex.flex-column
+                            button.btn.btn-primary(type="submit") Submit
+                            span 
+                                | Have an account ? 
+                                a(href="/")  Login Now
